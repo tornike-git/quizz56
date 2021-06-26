@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<h3>authorization</h3>
+
+<form method="post" style="width: 50%">
+    <input type="text" name="name" class="form-control" placeholder="enter name: "><br>
+    <input type="password" name="pass" class="form-control" placeholder="enter password: "><br>
+    <button type="submit" name="butt">Next</button>
+
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% for category, msg in messages %}
+<p class="{{category}}">{{msg}}</p>
+{% endfor %}
+{% endwith %}
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Base info{% endblock %}
+
+{% block content %}
+
+{% for i in all_shows %}
+<p>{{i}}</p>
+{% endfor %}
+
+{% endblock %}

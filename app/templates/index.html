@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Index {% endblock %}
+
+{% block content %}
+
+<form method="post" style="width: 50%">
+
+<input type="text" name="title" class="form-control" placeholder="შეიყვანეთ ფილმის სახელი : "><br>
+<input type="text" name="year" class="form-control" placeholder="შეიყვანეთ გადაღების წელი: "><br>
+<input type="text" name="rating" class="form-control" placeholder="შეიყვანეთ რეიტინგი: "><br>
+<button type="submit" name="butt2">Submit</button>
+
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% for category, msg in messages %}
+<p class="{{category}}">{{msg}}</p>
+{% endfor %}
+{% endwith %}
+
+{% endblock %}
